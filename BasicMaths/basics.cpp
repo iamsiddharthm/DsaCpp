@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 
@@ -72,8 +72,25 @@ void armstrong(){
     cout<<arm<<endl;
 
 }
-
+void NumOfdiv(){
+    //print all division
+    int n;
+    cout<<"Enter the value of n :"<<endl;
+    cin>>n;
+    vector<int>ls;
+    for(int i=1;i<=sqrt(n);i++){
+        if(n%i==0){
+            ls.push_back(i);
+            if(n/i!=i){
+                ls.push_back(n/i);
+            }
+        }
+    }
+    sort(ls.begin(),ls.end());
+    for(auto it:ls) cout<<it<<" ";
+}
 void gcd(){
+
     int p,q,r;
     cout<<"Enter value of p(p>q)"<<endl;
     cin>>p;
@@ -90,12 +107,62 @@ void gcd(){
     }
     cout<<p;
 }
+void gcd2(){
+    int p,q;
+    cout<<"Enter value of p"<<endl;
+    cin>>p;
+
+    cout<<"Enter value of q"<<endl;
+    cin>>q;
+
+    int min=0;
+    if(p<q){
+        min=p;
+    }
+    else min=q;
+    int gcd=0;
+    for(int i=1;i<=min;i++){
+        if(p%i==0 && q%i==0 ){
+            gcd=i;
+        }
+    }
+    cout<<gcd;
+}
+
+
+void eucliGCD(){
+    //gcd(n1,n2)=gcd(n1-n2,n2)
+    
+}
+
+
+void checkPrime(){
+    int n;
+    cout<<"Enter the value of n :"<<endl;
+    cin>>n;
+
+    int count=0;
+    for(int i=1;i*i<=n;i++){   //i*i bcs its sqrt of n
+        if(n%i==0){
+            count++;
+            if((n/i)!=i) count++;
+        }
+
+    }
+    if(count==2) cout<<"true";
+    else cout<<"false";
+
+}
+
+
 int main(){
     // digit();
     // countDigit();
     // reverseNum();
     // palidrome();
     // armstrong();
-    gcd();
+    gcd2();
+    // NumOfdiv();
+    // checkPrime();
     return 0; 
 }
