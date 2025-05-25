@@ -9,7 +9,6 @@ void name5(){
     name5();
 }
 
-
 void printname(int i,int n){
     if(i>n){
         return;
@@ -19,7 +18,6 @@ void printname(int i,int n){
     }
     printname(i+1,n);
 }
-
 
 void printNo(int i,int n){
     if(i>n){
@@ -50,6 +48,7 @@ void printBackNo(int i ,int n){
     printBackNo(i+1,n);
 
 }
+
 void BacktrackNo(int n,int i){
     if(n<i) return;
 
@@ -57,15 +56,47 @@ void BacktrackNo(int n,int i){
      BacktrackNo(n,i+1);
 }
 
+void sumRecursion(int i,int sum){
+
+    if(i<1){
+        cout<<sum;
+        return;
+
+    }
+
+    else sumRecursion(i-1,sum+i);
+}
+
+int  sumNo1(int n){
+    if(n==0) return 0;
+    else return n+sumNo1(n-1);
+}
+
+int fact(int n){
+    if(n==1) return 1;
+
+    else{
+        return n*fact(n-1);
+    }
+
+}
+
+
+
 int main(){
     // name5();
     int n;
     cout<<"enter n value"<<endl;
     cin>>n;
+    int sum=0;
     // printname(1,n);
     // printNo(1,n);
     // printRevNo(n,n);
-    printBackNo(1,n);
+    // printBackNo(1,n);
+    // sumRecursion(n,sum);
+    // sum2(n,sum);
+    // cout<<sumNo1(n);
+    cout << fact(n);
     return 0;
 }
 
