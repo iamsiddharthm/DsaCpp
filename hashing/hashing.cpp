@@ -3,7 +3,9 @@ using namespace std;
 
 int main(){
     int n;
-    cin>>n;;
+    cout<<"enter n"<<endl;
+    cin>>n;
+    cout<<"enter elemnt "<<endl;
     int arr[n];
     for(int i=0;i<n;i++){
         cin>>arr[i];
@@ -14,6 +16,9 @@ int main(){
         hash[arr[i]]+=1;
     }
 
+
+
+    cout<<"enter q:"<<endl;
     int q;
     cin>>q;
     while(q--){
