@@ -37,10 +37,16 @@ void Maphashing(){
         mpp[arr[i]]++;
     }
 
+    for(auto it : mpp){
+            cout<<it.first<<"->"<<it.second<<endl;
+    }
 
     int q;
     cout<<"enter the value of q";
     cin>>q;
+
+    
+
     while(q--){
         int number;
         cout<<"Enter the number :"<<endl;
