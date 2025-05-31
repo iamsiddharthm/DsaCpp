@@ -68,6 +68,7 @@ void armstrong(){
     while(n>0){
         int lastdigit=n%10;
         arm+=lastdigit*lastdigit*lastdigit;
+        n=n/10;
     }
     cout<<arm<<endl;
 
