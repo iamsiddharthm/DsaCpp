@@ -1,8 +1,35 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
-void hashingAlpha(){
+// int main(){
+//     int n;
+//     cin>>n;
+//     int arr[n];
+//     for(int i=0;i<n;i++){
+//         cin>>arr[i];
+//     }
+
+
+//     //precompute 
+//     int hash[13]={0};
+//     for(int i=0;i<n;i++){
+//         hash[arr[i]]+=1;
+//     }
+//     int q;
+//     cin>>q;
+//     while(q--){
+//         int number;
+//         cin>>number;
+//         //fecth
+//         cout<<"yes:"<<hash[number]<<endl;
+
+//     }
+// }
+
+
+//character hashing ;-
+
+int main(){
     string s;
-    cout<<"enter the string"<<endl;
     cin>>s;
 
     int hash[26]={0};
@@ -13,81 +40,11 @@ void hashingAlpha(){
     int q;
     cin>>q;
     while(q--){
-        char c;
-        cin>>c;
-        //fetch 
-        cout<<hash[c-'a']<<endl;
-    }
+        char ch;
+        cout<<"enter the char:\n";
+        cin>>ch;
+        cout<<"cout ="<<hash[ch-'a']<<endl;
 
 
-}
-
-void Maphashing(){
-    int n;
-    cout<<"enter the value of n"<<endl;
-    cin>>n;
-    int arr[n];
-    cout<<"enter the array element "<<endl;
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
-    }
-
-    map<int,int> mpp;
-    for(int i=0;i<n;i++){
-        mpp[arr[i]]++;
-    }
-
-    for(auto it : mpp){
-            cout<<it.first<<"->"<<it.second<<endl;
-    }
-
-    int q;
-    cout<<"enter the value of q";
-    cin>>q;
-
-    
-
-    while(q--){
-        int number;
-        cout<<"Enter the number :"<<endl;
-        cin>>number;
-
-        cout<<mpp[number]<<endl;
     }
 }
-
-int main(){
-    /*int n;
-    cout<<"enter n"<<endl;
-    cin>>n;
-    cout<<"enter elemnt "<<endl;
-    int arr[n];
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
-    }
-
-    int hash[13]={0};
-    for(int i=0;i<n;i++){
-        hash[arr[i]]+=1;
-    }
-
-
-
-    cout<<"enter q:"<<endl;
-    int q;
-    cin>>q;
-    while(q--){
-        int number;
-        cin>>number;
-
-        cout<<hash[number]<<endl;
-    }
-        */
-
-    // hashingAlpha();
-    Maphashing();
-}
-
-
-
-

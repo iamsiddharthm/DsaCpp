@@ -30,7 +30,7 @@ void merge(vector<int>&arr,int low,int mid,int high){
 }
 
 void ms(vector<int> &arr,int low,int high){
-    if(low==high) return;
+    if(low>=high) return;
     int mid=(low+high)/2;
     ms(arr,low,mid);
     ms(arr,mid+1,high);
