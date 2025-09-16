@@ -4,13 +4,10 @@ using namespace std;
 
 int is_sorted(int n,vector<int> a){
     for(int i=1;i<n;i++){
-        if(a[i]>=a[i-1]){
+        if(a[i]<a[i-1]){
 
-        }
-        else{
-            return false;
-        }
-    }
+        return false;
+    }}
     return true;
 }
 int main(){
