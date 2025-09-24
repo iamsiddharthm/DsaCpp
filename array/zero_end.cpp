@@ -31,21 +31,43 @@ int zero_end(int arr[],int n){
         cout<<arr[i]<<"\t";
     }
 }
-int main(){
-    //itn  arr[]={1,2,0,3,0,0,4} --->{1,2,3,4,0,0,0}
-    cout<<"Enter array size"<<endl;
-    int n;
-    cin>>n;
-    int arr[n];
-    cout<<"Enter the elements in the array "<<endl;
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
+    */
+   
+   
+   
+   //optimal approach
+   
+   int  zero_end(int arr[],int n){
+       //s1
+       //finding first 0 and assining its index to j :-
+       int j=-1;
+       for(int i=0;i<n;i++){
+        if (arr[i]==0);
+        j=i;
+        break;
+       }
+
+       //s2:-
+       for(int i=j+1;i<n;i++){
+        if(arr[i]!=0){
+            swap(arr[i],arr[j]);
+            j++;
+        }
+       }
     }
 
-    zero_end(arr,n);
-    return 0;
-}
 
-*/
-
-
+    int main(){
+        //itn  arr[]={1,2,0,3,0,0,4} --->{1,2,3,4,0,0,0}
+        cout<<"Enter array size"<<endl;
+        int n;
+        cin>>n;
+        int arr[n];
+        cout<<"Enter the elements in the array "<<endl;
+        for(int i=0;i<n;i++){
+            cin>>arr[i];
+        }
+    
+        zero_end(arr,n);
+        return 0;
+    }
